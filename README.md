@@ -12,3 +12,15 @@ Pre-requites
 - Make sure networking VLAN has been configured.
 - Establish the connectivity to Prism.
 - Make sure there is network communication between DataBase VM and Web Server VM.
+
+
+Web Server Image Requirment
+- I have already created the image of Ubuntu 22.04 LTS.
+- Sudo access for the user, this is for remote access through provisioner.
+- Internet connectivity to download the script from git. You may store the script in the locally and make the changes on provisioner.
+
+
+Database Server Requirment
+- I have already build the centos 7 image in prism.
+- With the help of remote execution provisioner, we are installing maridb with random password.
+- Due to security reason, storing the password on /root in INIT_PASSWORD file.
