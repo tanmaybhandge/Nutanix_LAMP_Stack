@@ -15,7 +15,7 @@ resource "nutanix_virtual_machine" "vm1" {
 
   provisioner "remote-exec" {
     inline = [
-
+      "sudo apt install curl",
       "curl https://raw.githubusercontent.com/tanmaybhandge/Wordpress_scripts/main/web -o wp.sh",
       "sudo sh wp.sh",
 
