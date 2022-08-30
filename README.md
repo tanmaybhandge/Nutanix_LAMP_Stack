@@ -93,3 +93,18 @@ variable  "image_name" {
 type  =  string
 default  =  "CentOS"
 }
+
+3. You may need to modify the prism configuration on ```provider.tf``` file.
+
+```hcl
+provider "nutanix" {
+  # Configuration options
+
+  username     = "admin"
+  password     = "<password of prism>"
+  port         = 9440
+  endpoint     = "<IP Address>"
+  insecure     = true
+  wait_timeout = 10
+}
+```
