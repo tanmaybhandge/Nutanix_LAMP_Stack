@@ -128,3 +128,32 @@ provider "nutanix" {
     host     = nutanix_virtual_machine.vm2.nic_list_status[0].ip_endpoint_list[0].ip
   }
 ```
+### Providers
+
+| Name | Version |
+|------|---------|
+nutanix | >= 1.7.0
+terraform | >= 1.2.7
+
+
+### Running this repository
+Initialize the modules (and download the Nutanix Provider) by running terraform init.
+
+    $ terraform init
+
+Once you’ve initialized the directory, it’s good to run the validate command before you run ```plan``` or ```apply```. Validation will catch syntax errors, version errors, and other issues.
+    
+    $ terraform validate
+
+Next, it’s always a good idea to do a dry run of your plan to see what it’s actually going to do. You can even use one of the subcommands with terraform plan to output your plan to apply it later.
+
+    $ terraform plan
+
+You can execute ```apply``` command, this command will deploy or applies your configuration.
+
+    $ terraform apply
+
+If you would like to remove / delete the resources which has been launched, you can execute the destroy command. This command will destroy your Infrastructure.
+
+    $ terraform destroy
+   
