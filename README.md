@@ -93,7 +93,7 @@ variable  "image_name" {
 type  =  string
 default  =  "CentOS"
 }
-
+```
 3. You may need to modify the prism configuration on ```provider.tf``` file.
 
 ```hcl
