@@ -32,42 +32,21 @@ Database Server Requirment
 ```hcl
 ## Web Server ##
 
-  
-
 variable  "vm_name_webserver" {
-
 type  =  string
-
 default  =  "WebServer_TF"
-
 }
-
-  
 
 variable  "image_name_webserver" {
-
 type  =  string
-
 default  =  "ubuntu_final"
-
-  
-
 }
-
-  
 
 data  "nutanix_image"  "image_info_webserver" {
-
 image_name  =  var.image_name_webserver
-
 }
 
-  
-  
-
 ## Web Server ##
-
-  
 
 variable  "vm_name_dbserver" {
 type  =  string
@@ -110,18 +89,7 @@ type  =  string
 default  =  "Primary"
 }
 
-  
-
 variable  "image_name" {
 type  =  string
 default  =  "CentOS"
 }
-
-data  "nutanix_cluster"  "myCluster" {
-name  =  var.cluster_name
-}
-
-data  "nutanix_subnet"  "subnet_info" {
-subnet_name  =  var.subnet_name
-}
-```
