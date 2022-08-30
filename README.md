@@ -25,7 +25,49 @@ Database Server Requirment
 - With the help of remote execution provisioner, we are installing maridb with random password.
 - Due to security reason, storing the password on /root in INIT_PASSWORD file.
 
+1. Clone the repository
+```git clone https://github.com/tanmaybhandge/Nutanix_LAMP_Stack.git```
+
+2. Update the variables in the  `variables.tf`  file to match your Nutanix environment.
+```hcl
 ## Web Server ##
+
+  
+
+variable  "vm_name_webserver" {
+
+type  =  string
+
+default  =  "WebServer_TF"
+
+}
+
+  
+
+variable  "image_name_webserver" {
+
+type  =  string
+
+default  =  "ubuntu_final"
+
+  
+
+}
+
+  
+
+data  "nutanix_image"  "image_info_webserver" {
+
+image_name  =  var.image_name_webserver
+
+}
+
+  
+  
+
+## Web Server ##
+
+  
 
 variable  "vm_name_dbserver" {
 type  =  string
@@ -60,13 +102,15 @@ default  =  1
 
 variable  "cluster_name" {
 type  =  string
-default  =  "POC306"
+default  =  "PHX-POC306"
 }
 
 variable  "subnet_name" {
 type  =  string
 default  =  "Primary"
 }
+
+  
 
 variable  "image_name" {
 type  =  string
