@@ -159,4 +159,4 @@ If you would like to remove / delete the resources which has been launched, you 
    
 Architecture
 
-![alt text](https://github.com/tanmaybhandge/Nutanix_LAMP_Stack/blob/main/DB%20%26%20Application.jpeg =250x250)
+<img src="https://github.com/tanmaybhandge/Nutanix_LAMP_Stack/blob/main/DB%20%26%20Application.jpeg" =250x250)
