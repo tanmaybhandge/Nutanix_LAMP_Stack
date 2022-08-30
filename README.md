@@ -46,7 +46,7 @@ data  "nutanix_image"  "image_info_webserver" {
 image_name  =  var.image_name_webserver
 }
 
-## Web Server ##
+## Database Server ##
 
 variable  "vm_name_dbserver" {
 type  =  string
