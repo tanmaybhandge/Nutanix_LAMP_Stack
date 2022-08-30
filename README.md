@@ -24,6 +24,8 @@ Database Server Requirments
 - With the help of remote execution provisioner, we are installing maridb with random password.
 - Due to security reason, storing the password on /root in INIT_PASSWORD file.
 
+### Configuration
+
 1. Clone the repository
 ```git clone https://github.com/tanmaybhandge/Nutanix_LAMP_Stack.git```
 
