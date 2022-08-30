@@ -128,6 +128,17 @@ provider "nutanix" {
     host     = nutanix_virtual_machine.vm2.nic_list_status[0].ip_endpoint_list[0].ip
   }
 ```
+
+5. After the resources deployment, you will find the output of VMs name and IP Addresses on the terminal. Login to the Database VM and naivate to ```/root``` path, you will find the ```INIT_PASSWORD``` file, open it and note down the password.
+
+6. Open the web browser from client system, type http://<IP address of the web server>/wordpress. You will get the first screen of the WordPress installer. Select your language for the WordPress and click on Continue.
+
+7. Next, enter the information about the MySQL database.
+    Dataabse name - wordpress
+    username - myuser
+    Password - <Enter the password captured on step 5>
+    Database Host - <Paste the IP address of Database VM>
+  
 ### Providers
 
 | Name | Version |
