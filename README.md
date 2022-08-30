@@ -1,7 +1,7 @@
 # Nutanix LAMP Stack VMs Deployment
 
 
-This repository deploys Virtual Machine's and configures the web & DB packages in deployed VMs on Nutanix cluster using Infrastructure as code with Terraform.
+This repository deploys Virtual Machine's and configures the Web & DB packages in deployed VMs on Nutanix cluster using Infrastructure as code with Terraform.
 
 Pre-requites
 
