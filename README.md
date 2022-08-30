@@ -108,3 +108,23 @@ provider "nutanix" {
   wait_timeout = 10
 }
 ```
+
+4. You may configure the username & password of the VM mentioned on the main.tf to remotely execute the script.
+```hcl
+## Under vm1 block ##
+
+  connection {
+    type     = "ssh"
+    user     = "root"
+    password = "<password goes here>"
+    host     = nutanix_virtual_machine.vm1.nic_list_status[0].ip_endpoint_list[0].ip
+  }
+
+## Under vm2 block ##
+ connection {
+    type     = "ssh"
+    user     = "root"
+    password = "<password goes here>"
+    host     = nutanix_virtual_machine.vm2.nic_list_status[0].ip_endpoint_list[0].ip
+  }
+```
